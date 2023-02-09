@@ -1,4 +1,4 @@
-% Éú³ÉÈıÆµËÄ²½ÌõÎÆ¹âÕ¤Í¼°¸
+% ç”Ÿæˆä¸‰é¢‘å››æ­¥æ¡çº¹å…‰æ …å›¾æ¡ˆ
 clc,clear;
 width = 1280;
 height = 720;
@@ -7,9 +7,8 @@ Iv = zeros(height,width,12);
 
 Ia = 135;
 Ib = 100;
-s = 13;
+s = 10;
 f = [(s+1)*(s+1),s*(s+1),s*s];
-% f = [128,100,73];
 f = f/width;
 for j=1:width
     for k=1:3
@@ -42,13 +41,13 @@ for n=1:12
     imwrite(uint8(Iv(:,:,n)),filename);
 end
 
-% ºÚ°×Í¼°¸
+% é»‘ç™½å›¾æ¡ˆ
 Iblack = zeros(height,width);
 Iwhite = ones(height,width)*255;
 imwrite(uint8(Iblack),'generatePic3\2.bmp');
 imwrite(uint8(Iwhite),'generatePic3\3.bmp');
 
-% Ê®×ÖÍ¼
+% åå­—å›¾
 Icross = ones(height,width)*255;
 centerx = round(0.5*width);
 centery = round(0.5*height);
